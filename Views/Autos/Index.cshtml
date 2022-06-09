@@ -1,5 +1,4 @@
-﻿@model IEnumerable<ConcesionariaApp.Models.Auto>
-
+﻿@model MvcMovie.Models.AutoMarcaViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -10,8 +9,11 @@
     <a asp-action="Create">Create New</a>
 </p>
 
-<form asp-controller="Autos" asp-action="Index">
+  <form asp-controller="Autos" asp-action="Index" method="get">
     <p>
+         <select asp-for="AutoMarca" asp-items="Model.Marcas">
+            <option value="">All</option>
+        </select>
         Marca: <input type="text" name="SearchString" />
         <input type="submit" value="Filter" />
     </p>
@@ -19,23 +21,23 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Modelo)
+             <th>
+                @Html.DisplayNameFor(model => model.Autos[0].Modelo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AñoDelModelo)
+                @Html.DisplayNameFor(model => model.Autos[0].AñoDelModelo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Marca)
+                @Html.DisplayNameFor(model => model.Autos[0].Marca)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PrecioTotal)
+                @Html.DisplayNameFor(model => model.Autos[0].PrecioTotal)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Autos) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Modelo)

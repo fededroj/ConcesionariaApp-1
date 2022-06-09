@@ -20,19 +20,35 @@ namespace ConcesionariaApp.Controllers
         }
 
         // GET: Autos
-        public async Task<IActionResult> Index(string searchString)
-{
-    var autos = from m in _context.Auto
-                 select m;
+        // GET: Movies
+        public async Task<IActionResult> Index(string autoMarca, string searchString)
+        {
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Auto
+                                            orderby m.Marca
+                                            select m.Marca;
+            var autos = from m in _context.Auto
+                         select m;
 
-    if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
-                autos = autos.Where(s => s.Marca.Contains(searchString));
+                autos = autos.Where(s => s.Modelo.Contains(searchString));
             }
-        
 
+            if (!string.IsNullOrEmpty(autoMarca))
+            {
+                autos = autos.Where(x => x.Marca == autoMarca);
+            }
 
-                return View(await autos.ToListAsync());
+            var AutoMarcaVM = new AutoMarcaViewModel
+            {
+                Marcas = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Autos = await autos.ToListAsync()
+            };
+
+            return View(AutoMarcaVM);
+
+           
 }
 
         // GET: Autos/Details/5
