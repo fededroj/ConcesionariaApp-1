@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp\\ConcesionariaApp.csproj": {}
+    "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp-1\\ConcesionariaApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp\\ConcesionariaApp.csproj": {
+    "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp-1\\ConcesionariaApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp\\ConcesionariaApp.csproj",
+        "projectUniqueName": "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp-1\\ConcesionariaApp.csproj",
         "projectName": "ConcesionariaApp",
-        "projectPath": "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp\\ConcesionariaApp.csproj",
+        "projectPath": "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp-1\\ConcesionariaApp.csproj",
         "packagesPath": "C:\\Users\\Federico Rojas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp\\obj\\",
+        "outputPath": "C:\\Users\\Federico Rojas\\source\\repos\\Programacion5\\ConcesionariaApp-1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Federico Rojas\\AppData\\Roaming\\NuGet\\NuGet.Config",
